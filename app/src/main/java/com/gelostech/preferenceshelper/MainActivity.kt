@@ -23,18 +23,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         /**
-         *  Initialise default shared preferences
+         *  Initialise default shared preferences. Pass the context.
          */
         val prefs = PreferenceHelper.defaultPrefs(this)
 
         /**
-         * initialise custom shared preferences
+         * Initialise custom shared preferences. Pass the context and the name of the preferences.
          */
         val customPrefs  = PreferenceHelper.customPrefs(this, PREFERENCES)
 
 
         /**
-         *  Settings data
+         *  Setting data
          */
         prefs[BOOLEAN_PREF] = false
         prefs[STRING_PREF] = "Some random string"
@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity() {
          *  Retrieving data
          *  Pass the key and the default value
          */
-        val getString = prefs[STRING_PREF, ""]
-        val getInt = prefs[INT_PREF, -1]
-        val getFloat = prefs[FLOAT_PREF, 10f]
-        val getBoolean = prefs[BOOLEAN_PREF, true]
-        val getLong = prefs[LONG_PREF, 500L]
+        val getString: String = prefs[STRING_PREF, ""]
+        val getInt:Int = prefs[INT_PREF, -1]
+        val getFloat: Float = prefs[FLOAT_PREF, 10f]
+        val getBoolean: Boolean = prefs[BOOLEAN_PREF, true]
+        val getLong: Long= prefs[LONG_PREF, 500L]
     }
 }
