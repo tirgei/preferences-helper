@@ -8,11 +8,22 @@ You can add the library to your project via gradle
 Step 1: Add in your root build.gradle of your project
 ```
     allprojects {
-	        	repositories {
-			                ...
-			                maven { url 'https://jitpack.io' }
-		        }
-	    }
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+    }
+```
+
+Step 2: Add the dependency to your app gradle
+```
+
+    dependencies {
+    	...
+	implementation 'com.github.tirgei:preferences-helper:1.0.0'
+	...
+    }
+   
 ```
 
 
@@ -21,13 +32,13 @@ Initialise the PreferencesHelper instance. You can either initialise as the defa
 
 ```kotlin
     /**
-     *  Initialise default shared preferences
+     *  Initialise default shared preferences. Pass the context.
      */
     val prefs = PreferenceHelper.defaultPrefs(this)
     
     
     /**
-     * initialise custom shared preferences
+     * Initialise custom shared preferences. Pass the context and the preferences name.
      */
     const val PREFERENCES = "CUSTOM_PREFERENCES"
      
@@ -55,7 +66,7 @@ To retrieve data, call the preferences instance and pass along the key of the da
         
         
         /**
-         *  Settings data
+         *  Setting data
          */
         prefs[BOOLEAN_PREF] = false
         prefs[STRING_PREF] = "Some random string"
@@ -68,11 +79,11 @@ To retrieve data, call the preferences instance and pass along the key of the da
          *  Retrieving data
          *  Pass the key and the default value
          */
-        val getString = prefs[STRING_PREF, ""]
-        val getInt = prefs[INT_PREF, -1]
-        val getFloat = prefs[FLOAT_PREF, 10f]
-        val getBoolean = prefs[BOOLEAN_PREF, true]
-        val getLong = prefs[LONG_PREF, 500L]
+        val getString: String = prefs[STRING_PREF, ""]
+        val getInt: Int = prefs[INT_PREF, -1]
+        val getFloat: Float = prefs[FLOAT_PREF, 10f]
+        val getBoolean: Boolean = prefs[BOOLEAN_PREF, true]
+        val getLong: Long = prefs[LONG_PREF, 500L]
     }
 
 
