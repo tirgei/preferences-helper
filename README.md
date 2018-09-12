@@ -1,5 +1,7 @@
 ## Preferences Helper
 
+[![](https://jitpack.io/v/tirgei/preferences-helper.svg)](https://jitpack.io/#tirgei/preferences-helper)
+
 An android library to remove the boilerplate code when dealing with Shared Preferences. It is easy to setup and get started with.
 
 ### Download
