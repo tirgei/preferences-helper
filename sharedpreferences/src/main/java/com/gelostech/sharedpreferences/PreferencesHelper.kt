@@ -1,5 +1,3 @@
-package com.gelostech.sharedpreferences
-
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
