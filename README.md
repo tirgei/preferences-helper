@@ -22,7 +22,7 @@ Step 2: Add the dependency to your app gradle
 
     dependencies {
     	...
-	implementation 'com.github.tirgei:preferences-helper:1.0.3'
+	implementation 'com.github.tirgei:preferences-helper:{latest-version}'
 	...
     }
    
